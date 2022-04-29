@@ -98,9 +98,10 @@ GEM
     unf_ext (0.0.8.1)
     unicode-display_width (1.8.0)
     webrick (1.7.0)
+    zeitwerk (2.5.4)
 
 PLATFORMS
-  x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   dotenv (~> 2.7)
@@ -110,4 +111,4 @@ DEPENDENCIES
   webrick (~> 1.7)
 
 BUNDLED WITH
-   2.2.26
+   2.3.12
