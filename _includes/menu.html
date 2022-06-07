@@ -5,40 +5,41 @@
 
 
   <!-- Links -->
-    <section>
-      <ul class="links">
+  <section>
+    <div class="mini-posts">
+      <h3>Tags</h3>
+      {% assign tags = site.tags | sort %}
+      {% for tag in tags %}
+      <ul>
         <li>
-          <a href="#">
-            <h3>Lorem ipsum</h3>
-            <p>Feugiat tempus veroeros dolor</p>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <h3>Dolor sit amet</h3>
-            <p>Sed vitae justo condimentum</p>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <h3>Feugiat veroeros</h3>
-            <p>Phasellus sed ultricies mi congue</p>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <h3>Etiam sed consequat</h3>
-            <p>Porta lectus amet ultricies</p>
+          <a class="posts" href="{{ site.url }}{{ site.baseurl }}/tags/{{ tag | first | slugify }}/">{{ tag[0] | replace:'-', ' '
+            }} ({{ tag | last | size
+            }}){% unless forloop.last %}, {% endunless %}
           </a>
         </li>
       </ul>
-    </section>
+      {% endfor %}
+    </div>
+  </section>
 
-  <!-- Actions -->
-    <section>
-      <ul class="actions stacked">
-        <li><a href="#" class="button large fit">Log In</a></li>
+  <section>
+    <div class="mini-posts">
+      <h3>Authors</h3>
+      {% assign authors = site.authors | sort %}
+      {% for author in authors %}
+      {% assign totpost = 0 %}
+        {% for post in site.posts %}
+        {% if post.author contains author.short_name %}
+          {% assign totpost = totpost | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      <ul>
+        <li>
+          <a class="posts" href="{{ site.url }}{{ site.baseurl }}/authors/{{ author.name |slugify }}/">{{ author.name }} ({{ totpost }})</a>
+        </li>
       </ul>
-    </section>
+    {% endfor %}
+    </div>
+  </section>
 
 </section>
