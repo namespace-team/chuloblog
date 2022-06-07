@@ -1,0 +1,66 @@
+<section id="sidebar">
+
+  <!-- Intro -->
+    <section id="intro">
+      <!-- <a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a> -->
+      <header>
+        <h2>What I LEARN TODAY</h2>
+        <p>Simple Notebook Learned Topics </p>
+      </header>
+    </section>
+
+  <!-- Mini Posts -->
+  {% include search-lunr.html %}
+
+    <section>
+      <div class="mini-posts">
+        <h3>Tags</h3>
+        {% assign tags = site.tags | sort %}
+        {% for tag in tags %}
+        <ul>
+          <li>
+            <a class="posts" href="{{ site.url }}{{ site.baseurl }}/tags/{{ tag | first | slugify }}/">{{ tag[0] | replace:'-', ' '
+              }} ({{ tag | last | size
+              }}){% unless forloop.last %}, {% endunless %}
+            </a>
+          </li>
+        </ul>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section>
+      <div class="mini-posts">
+        <h3>Authors</h3>
+        {% assign authors = site.authors | sort %}
+        {% for author in authors %}
+        {% assign totpost = 0 %}
+          {% for post in site.posts %}
+          {% if post.author contains author.short_name %}
+            {% assign totpost = totpost | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+        <ul>
+          <li>
+            <a class="posts" href="{{ site.url }}{{ site.baseurl }}/authors/{{ author.name |slugify }}/">{{ author.name }} ({{ totpost }})</a>
+          </li>
+        </ul>
+      {% endfor %}
+      </div>
+    </section>
+
+
+
+  <!-- Footer -->
+    <section id="footer">
+      <ul class="icons">
+        <!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
+        <li><a href="https://www.facebook.com/chulo.solutions/" class="icon brands fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
+        <li><a href="https://www.instagram.com/chulosolutions/" class="icon brands fa-instagram" target="_blank"><span class="label"  target="_blank">Instagram</span></a></li>
+        <!-- <li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li> -->
+        <li><a href="mailto:contact@namespace.jp" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+      </ul>
+      <p class="copyright">&copy;  <a href="http://namespace.jp" target="_blank">Namespace Inc</a> 2016 - {{ "now" | date: "%Y" }}.</a>.</p>
+    </section>
+
+</section>

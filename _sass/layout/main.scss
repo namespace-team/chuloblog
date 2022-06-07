@@ -1,0 +1,43 @@
+///
+/// Future Imperfect by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Main */
+
+	#main {
+		@include vendor('flex-grow', '1');
+		-ms-flex: 1;
+		width: 100%;
+		.tag-title{
+			display: flex;
+			p{
+				margin-top: -.2em;
+				margin-left: 5em;
+    		font-size: .8em;
+			}
+			.mini-cal{
+				margin-right: 1em;
+				.mini-month{
+					background-color: tomato;
+					color: white;
+					padding: 0.2em;
+					font-size: .5em;
+				}
+				.mini-date{
+					font-size: .8em;
+					text-align: center;
+				}
+			}
+		}
+	.search{
+		.form{
+			height: 100%;
+			input{
+				display: flex;
+				height: 100%;
+			}
+		}
+	}
+	}

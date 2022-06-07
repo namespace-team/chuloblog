@@ -1,0 +1,65 @@
+---
+# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
+# only main files contain this front matter, not partials.
+---
+
+@import 'libs/vars.scss';
+@import 'libs/functions.scss';
+@import 'libs/mixins.scss';
+@import 'libs/vendor.scss';
+@import 'libs/breakpoints.scss';
+@import 'libs/html-grid.scss';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Raleway:400,800,900');
+
+/*
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+// Breakpoints.
+
+	@include breakpoints((
+		xlarge:   ( 1281px,  1680px ),
+		large:    ( 981px,   1280px ),
+		medium:   ( 737px,   980px  ),
+		small:    ( 481px,   736px  ),
+		xsmall:   ( null,    480px  )
+	));
+
+// Base.
+
+	@import 'base/reset.scss';
+	@import 'base/page.scss';
+	@import 'base/typography.scss';
+
+// Component.
+
+	@import 'components/row.scss';
+	@import 'components/author.scss';
+	@import 'components/blurb.scss';
+	@import 'components/box.scss';
+	@import 'components/button.scss';
+	@import 'components/form.scss';
+	@import 'components/icon.scss';
+	@import 'components/image.scss';
+	@import 'components/list.scss';
+	@import 'components/actions.scss';
+	@import 'components/icons.scss';
+	@import 'components/posts.scss';
+	@import 'components/mini-post.scss';
+	@import 'components/post.scss';
+	@import 'components/section.scss';
+	@import 'components/table.scss';
+
+// Layout.
+
+	@import 'layout/header.scss';
+	@import 'layout/wrapper.scss';
+	@import 'layout/main.scss';
+	@import 'layout/sidebar.scss';
+	// @import 'layout/container.scss';
+	@import 'layout/intro.scss';
+	@import 'layout/footer.scss';
+	@import 'layout/menu.scss';

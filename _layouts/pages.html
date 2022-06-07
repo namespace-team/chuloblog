@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+  {% include head.html %}
+
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+        {% include header.html %}
+        {% include menu.html %}
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="#">{{page.title}}</a></h2>
+										<!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+									</div>
+									<div class="meta">
+										<time class="published" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b, %y" }}</time>
+										<a href="#" class="author"><span class="name">{{ page.fullname | split: " " | first }}</span>
+                      <!-- <img src="/images/avatar.jpg" alt="" /> -->
+                    </a>
+									</div>
+								</header>
+								<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+                {{ content }}
+                <footer>
+									<ul class="stats">
+										<li><a href="{{ site.url }}{{ site.baseurl }}/tags/{{ page.tag }}">{{ page.tag }}</a></li>
+										<li><a href="#" class="icon solid fa-heart">28</a></li>
+										<li><a href="#" class="icon solid fa-comment">128</a></li>
+									</ul>
+								</footer>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+    <script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/browser.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/breakpoints.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/util.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+
+	</body>
+</html>

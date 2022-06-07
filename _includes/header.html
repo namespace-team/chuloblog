@@ -1,13 +1,28 @@
-<div class="wrapper">
-  <a href="#" class="men">&#9776;</a>
-  <nav>
-    {% for item in site.data.navigation %}
-    <a href="{{ item.url }}" style="font-size:large">{{ item.title }}</a>
-    {% endfor %}
+<header id="header">
+  <h1><a href="{{ site.url }}{{ site.baseurl }}">WILT</a></h1>
+  <nav class="links">
+    <ul>
+      {% for item in site.data.navigation %}
+      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
   </nav>
-  <div class="hero">
-    <h1><a href="/">Today I learnt Blog </a></h1>
-  </div>
-  <a href="#" data-tip="Share" class="gen">&#9874;</a>
-  <a href="#" data-tip="Favorites" class="sel">&starf;</a>
-</div>
+  <nav class="main">
+    <ul>
+      <li class="search">
+        <form class="search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);"
+          style="height: 100%;">
+          <input type="text" class="form-control" id="lunrsearch" name="q" maxlength="255" value=""
+            placeholder="Search..." style="display:flex;height: 100%;" />
+        </form>
+      </li>
+      <li class="searchIcon">
+        <a href="{{ site.url }}{{ site.baseurl }}/search.html" class="fa fa-search"
+          style="font-size: 0.9em; color: #292929; top: 0.1em; size: 23; height: 1.5em;width: 1.5em;"></a>
+      </li>
+      <li class="menu">
+        <a class="fa-bars" href="#menu">Menu</a>
+      </li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,16 @@
+<div id="main">
+
+  <!-- Post -->
+{% for post in site.posts %}
+   <p>{{ post.title }}</p>
+{% endfor %}
+
+
+
+  <!-- Pagination -->
+    <ul class="actions pagination">
+      <li><a href="" class="disabled button large previous">Previous Page</a></li>
+      <li><a href="#" class="button large next">Next Page</a></li>
+    </ul>
+
+</div>

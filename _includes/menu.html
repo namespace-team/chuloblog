@@ -1,0 +1,45 @@
+<section id="menu">
+
+  <!-- Search -->
+  <h2>WILT</h2>
+
+
+  <!-- Links -->
+  <section>
+    <div class="mini-posts">
+      <h3>Tags</h3>
+      {% assign tags = site.tags | sort %}
+      {% for tag in tags %}
+      <ul>
+        <li>
+          <a class="posts" href="{{ site.url }}{{ site.baseurl }}/tags/{{ tag | first | slugify }}/">{{ tag[0] | replace:'-', ' '
+            }} ({{ tag | last | size
+            }}){% unless forloop.last %}, {% endunless %}
+          </a>
+        </li>
+      </ul>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section>
+    <div class="mini-posts">
+      <h3>Authors</h3>
+      {% assign authors = site.authors | sort %}
+      {% for author in authors %}
+      {% assign totpost = 0 %}
+        {% for post in site.posts %}
+        {% if post.author contains author.short_name %}
+          {% assign totpost = totpost | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      <ul>
+        <li>
+          <a class="posts" href="{{ site.url }}{{ site.baseurl }}/authors/{{ author.name |slugify }}/">{{ author.name }} ({{ totpost }})</a>
+        </li>
+      </ul>
+    {% endfor %}
+    </div>
+  </section>
+
+</section>

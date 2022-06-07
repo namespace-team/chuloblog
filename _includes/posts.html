@@ -1,0 +1,23 @@
+<article class="post">
+  <header>
+    <div class="title">
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+    </div>
+    <div class="meta">
+      <time class="published" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b, %y" }}</time>
+      <a href="#" class="author"><span class="name">{{ post.fullname | split: " " | first }}</span>
+        <!-- <img src="/images/avatar.jpg" alt="" /> -->
+      </a>
+    </div>
+  </header>
+  <span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+  {{ post.excerpt }}
+  <footer>
+    <ul class="stats">
+      <li><a href="{{ site.url }}{{ site.baseurl }}/tags/{{ page.tag }}">{{ page.tag }}</a></li>
+      <li><a href="#" class="icon solid fa-heart">28</a></li>
+      <li><a href="#" class="icon solid fa-comment">128</a></li>
+    </ul>
+  </footer>
+</article>
