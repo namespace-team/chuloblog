@@ -1,0 +1,20 @@
+.container{
+  margin: 2vh 2vw;
+  display: flex;
+  flex-direction: row;
+  .sidebar{
+    display: flex;
+    order: -1;
+    width: 200px;
+    flex: 0 0 20vw;
+
+    #sidebar{
+      position: fixed;
+    }
+  }
+  .main{
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+}

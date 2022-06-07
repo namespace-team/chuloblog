@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+
+
+{% assign totpost = 0 %}
+{% for post in site.posts %}
+  {% if post.author contains page.short_name %}
+  {% assign totpost = totpost | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+<h1 style="font-size: 1.5em;">#{{page.name}} </h1>
+  {% for post in site.posts %}
+    {% if post.author contains page.short_name %}
+      {% include posts.html post=post page=page %}
+    {% endif %}
+  {% endfor %}
