@@ -1,0 +1,16 @@
+---
+layout: default
+title: List of all blogs
+---
+{% include search-lunr.html %}
+
+<div>
+  <form class="search" onSubmit="return lunr_search_mini(document.getElementById('lunrsearchpage').value);" style="height: 100%;">
+    <input type="text" class="form-control" id="lunrsearchpage" name="q" maxlength="255" value="" placeholder="Search..." style="display:flex;height: 100%;"/>
+  </form>
+</div>
+
+<div id="main">
+
+</div>
+
