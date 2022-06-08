@@ -12,7 +12,8 @@
       {% for tag in tags %}
       <ul>
         <li>
-          <a class="posts" href="{{ site.url }}{{ site.baseurl }}/tags/{{ tag | first | slugify }}/">{{ tag[0] | replace:'-', ' '
+          <a class="posts" href="{{ site.url }}{{ site.baseurl }}/tags/{{ tag | first | slugify }}/">{{ tag[0] |
+            replace:'-', ' '
             }} ({{ tag | last | size
             }}){% unless forloop.last %}, {% endunless %}
           </a>
@@ -28,17 +29,18 @@
       {% assign authors = site.authors | sort %}
       {% for author in authors %}
       {% assign totpost = 0 %}
-        {% for post in site.posts %}
-        {% if post.author contains author.short_name %}
-          {% assign totpost = totpost | plus: 1 %}
-        {% endif %}
+      {% for post in site.posts %}
+      {% if post.author contains author.short_name %}
+      {% assign totpost = totpost | plus: 1 %}
+      {% endif %}
       {% endfor %}
       <ul>
         <li>
-          <a class="posts" href="{{ site.url }}{{ site.baseurl }}/authors/{{ author.name |slugify }}/">{{ author.name }} ({{ totpost }})</a>
+          <a class="posts" href="{{ site.url }}{{ site.baseurl }}/authors/{{ author.name |slugify }}/">{{ author.name }}
+            ({{ totpost }})</a>
         </li>
       </ul>
-    {% endfor %}
+      {% endfor %}
     </div>
   </section>
 

@@ -2,9 +2,9 @@
 layout: pages
 title: Building blogs using Trello as your database
 date: 2022-06-07
-author: 
+author: rabinshrestha3
 tag: backend
-fullname: 
+fullname: Rabin Shrestha
 ---
 
 Github has always been able to serve static contents through Jekyll using Github pages. Github pages has enabled millions of static pages to be published easily and for free. The only downside of it has been that Github supports limited number of Ruby gems. 

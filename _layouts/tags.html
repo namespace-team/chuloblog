@@ -6,19 +6,19 @@ layout: default
 
 {% assign totpost = 0 %}
 {% for post in site.posts %}
-  {% if post.tags contains page.tag %}
-  {% assign totpost = totpost | plus: 1 %}
-  {% endif %}
+{% if post.tags contains page.tag %}
+{% assign totpost = totpost | plus: 1 %}
+{% endif %}
 {% endfor %}
 
 <!-- <h1>#{{page.tag}} ({{totpost}})</h1> -->
 <h1 style="font-size: 1.5em;">#{{page.tag}} </h1>
 
-  {% for post in site.posts %}
-    {% if post.tags contains page.tag %}
-      {% include posts.html post=post page=page %}
+{% for post in site.posts %}
+{% if post.tags contains page.tag %}
+{% include posts.html post=post page=page %}
 
-    <!-- <article class="post">
+<!-- <article class="post">
       <header>
         <div class="title">
 
@@ -27,7 +27,7 @@ layout: default
         </div>
         <div class="meta">
           <time class="published" datetime="2015-11-01">{{ post.date | date: '%Y %b %d'}}</time>
-          <a href="#" class="author"><span class="name">{{post.fullname | }}</span><img src="/images/avatar.jpg" alt="" /></a>
+          <a href="#" class="author"><span class="name">{{post.fullname}}</span><img src="/images/avatar.jpg" alt="" /></a>
         </div>
       </header>
       <footer>
@@ -41,12 +41,5 @@ layout: default
         </ul>
       </footer>
     </article> -->
-    {% endif %}
-  {% endfor %}
-
-
-
-
-
-
-
+{% endif %}
+{% endfor %}
