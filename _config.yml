@@ -12,4 +12,5 @@ collections:
     permalink: /:slug/
   authors:
     output: true
+    permalink: /:collection/:path/
 url: https://til.chulo-solutions.com
