@@ -51,6 +51,6 @@ jobs:
           bundle exec jekyll build
       - uses: EndBug/add-and-commit@v9
         with:
-          add: "*.md"
+          add: "_posts"
           author_name: autobot
           message: "auto commit"
