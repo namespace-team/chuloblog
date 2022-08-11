@@ -42,6 +42,5 @@ main()
 Run the script in console by writing `npx hardhat run ./scripts/1_deploy_contract.js --network goerli`.
 The deployed contract address should appear in the console itself.
 
-Futhermore, we can verify the contract using by writing `npx hardhat verify "ADDRESS" --network goerli ` 
 
         
