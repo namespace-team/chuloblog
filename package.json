@@ -10,7 +10,7 @@
     "build": "NODE_ENV=production eleventy --pathprefix 'build'",
     "deploy": "gh-pages -d _site"
   },
-  "keywords": [],
+  "keywords": [ ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -27,6 +27,8 @@
     "nunjucks": "^3.2.3",
     "path": "^0.12.7",
     "url": "^0.11.0",
-    "yaml": "^2.2.1"
+    "yaml": "^2.2.1",
+    "@11ty/eleventy": "^2.0.0"
+
   }
 }
