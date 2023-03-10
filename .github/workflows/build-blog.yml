@@ -46,12 +46,6 @@ jobs:
       - name: Build posts
         run: |
           npm run hook
-      - uses: actions/checkout@master
-      - name: Build
-        uses: TartanLlama/actions-eleventy@master
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          publish_dir: _site 
-          publish_branch: gh-pages
+          npm run start
+
   
