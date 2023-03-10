@@ -10,7 +10,7 @@
     "build": "NODE_ENV=production eleventy --pathprefix 'build'",
     "deploy": "gh-pages -d _site"
   },
-  "keywords": [ ],
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "debug": "^4.3.4",
+    "dotenv": "^16.0.3",
     "fs-extra": "^11.1.0",
     "markdown-it": "^10.0.0",
     "nunjucks": "^3.2.3",

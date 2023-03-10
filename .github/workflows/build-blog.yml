@@ -24,6 +24,9 @@ jobs:
           sh rmposts.sh
           rm rmposts.sh
           cd ..
+      - name: install npms
+        run: |
+          npm i 
       - name: Build posts
         run: |
           npm run hook
