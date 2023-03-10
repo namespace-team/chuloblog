@@ -54,7 +54,7 @@ function toAuthor(article) {
   var frontMatter = {
     layout: 'default',
     link: members[members.findIndex(user => user.id === article.idMembers[0])]['username'],
-    permalink: 'authors/{{link}}'
+    permalink: 'authors/{{link}}/'
   }
   var body = '{% include "partials/authorPost.njk" %}'
   var wholeContent = `---\n${yaml.stringify(frontMatter)}---\n\n${body}\n`
@@ -65,7 +65,7 @@ function toLabel(article) {
   var frontMatter = {
     layout: 'default',
     link: article.labels[0].name,
-    permalink: 'labels/{{link}}'
+    permalink: 'labels/{{link}}/'
   }
   var body = '{% include "partials/labelPost.njk" %}'
   var wholeContent = `---\n${yaml.stringify(frontMatter)}---\n\n${body}\n`
@@ -82,6 +82,10 @@ blog.forEach(article => {
 blog.forEach(article => {
   var basename = members[members.findIndex(user => user.id === article.idMembers[0])]['username']
   var filePath = join(authorsDir, `${basename}.njk`)
+  // fs.writeFile(filePath, toAuthor(article), { flag: 'wx' }, function (err) {
+  //   if (err) throw err;
+  //   console.log("It's saved!");
+  // })
   if (fs.existsSync(filePath)) {
     //file exists
   }
@@ -93,6 +97,10 @@ blog.forEach(article => {
 blog.forEach(article => {
   var basename = article.labels[0].name
   var filePath = join(labelsDir, `${basename}.njk`)
+  // fs.writeFile(filePath, toLabel(article), { flag: 'wx' }, function (err) {
+  //   if (err) throw err;
+  //   console.log("It's saved!");
+  // })
   if (fs.existsSync(filePath)) {
     //file exists
   }

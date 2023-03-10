@@ -50,7 +50,7 @@ stdout, and stderr when running other programs. We can install the gem simply by
 5. The final ruby code should look like:
 
 
-```
+```py
   stdout, stderr, status = Open3.capture3(
     '/opt/venv/bin/python',
     './hello-python-script.py',
@@ -83,7 +83,7 @@ required.
 
 7. The final code should look like:
 
-    ```
+    ```rb
     import sys
     
     sentence_arg = sys.argv[1]
@@ -114,7 +114,7 @@ code into python script and return response. Product list is printed in the
 console if the response is successful, else print error message.
 
 
-```
+```rb
 
 // main.rb
 
@@ -146,7 +146,7 @@ end
 ```
 
 
-```
+```py
 
 // fetch-dummy-json.py
 
