@@ -12,6 +12,7 @@ Testnet is an instance of a blockchain underlying the same or newer version of t
 We will require few ether for deploying any smart contract. For that, we can go to the respective faucet to get some test ether. In our case, we will visit the [goerli faucet](https://goerlifaucet.com/) and get some ether.
 
 In our `hardhat.config.js`, we can add the following code. Do not forget to add `GOERLI_ALCHEMY_KEY` and `GOERLI_ACCOUNT_PRIVATE_KEY` to the `.env` file.
+
 ```
 goerli: {
   url: `https://eth-goerli.g.alchemy.com/v2/${process.env.GOERLI_ALCHEMY_KEY}`,
@@ -22,6 +23,7 @@ goerli: {
 ```
 
 We will need to write a migration as below. Replace `Contract` with your actual contract name.
+
 ```
 // 1_deploy_contract.js
 async function main() {

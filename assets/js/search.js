@@ -1,4 +1,4 @@
-(function() {
+(function () {
   function displaySearchResults(results, store) {
     var searchResults = document.getElementById('search-results');
 
@@ -32,7 +32,6 @@
 
   var searchTerm = getQueryVariable('query');
 
-
   if (searchTerm) {
     document.getElementById('search-box').setAttribute("value", searchTerm);
 
@@ -48,7 +47,6 @@
         this.add(doc)
       }, this)
     });
-    
 
     // for (var key in window.store) { // Add the data to lunr
     //   idx.add({
@@ -65,7 +63,7 @@
 
 
     // var idx = lunr(function () {
-        
+
     //   this.ref('link')
     //   this.field('author')
     //   this.field('title')
@@ -76,7 +74,5 @@
     //   }, this)
     //  });
 
-
-    
   }
 })();

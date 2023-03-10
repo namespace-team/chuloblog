@@ -33,7 +33,7 @@ module Jekyll
       cards.each do |card|
         card_id = card.short_url.split("c/")[1]
         actions = get_card_actions(card_id)
-        # binding.pry
+        binding.pry
 
         actions ? @author = actions["fullName"] : @uthor
         actions ? @username = actions["username"] : @username
