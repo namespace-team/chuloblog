@@ -46,6 +46,6 @@ jobs:
       - name: Build posts
         run: |
           npm run hook
-          npm run start
+          npm run build
 
   
