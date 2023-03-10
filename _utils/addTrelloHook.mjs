@@ -24,6 +24,7 @@ const key = process.env.TRELLO_KEY
 const board = process.env.TRELLO_BOARD_ID
 
 const blogCards = await fetch(`https://api.trello.com/1/lists/${listID}/cards?key=${key}&token=${token}`);
+console.log(blogCards)
 const blog = await blogCards.json();
 
 const membersRequest = await fetch(`https://api.trello.com/1/boards/${board}/members?key=${key}&token=${token}`);
