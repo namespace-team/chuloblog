@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-      List of all blogs
+      
     </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 <link type="text/css" rel="stylesheet" href="/build/assets/css/style.css">
@@ -160,384 +160,67 @@ var documents = [{
 
           </div>
           <div class="main_content" id="contentArea">
-            <article class="post">
-    <div class="title">
-      <h2>
-        <a href="posts/2023-02-07-advantage-of-health-checkup/">Advantage of health checkup</a>
-      </h2>
-      <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-    </div>
-    <div class="meta">
-      <small>
-        <i class="fa-solid fa-pen-nib"></i>
-      </small>
-      <a href="/build/authors/poudelmadhav" class="author">
-        <small class="name">madhav</small>
-      </a>
-      <small>
-        <i class="fa-regular fa-calendar"></i>
-      </small>
-        <small>Tue Feb 07 2023 </small>
-    </div>
-    <span class="image featured">
-      <img src="images/pic01.jpg" alt="" />
-    </span>
-    <p>Reduce Stress level &amp;amp; helps to improve physical fitness
-Helps to improve well being and self-assurance
-Reduce health risks &amp;amp; personal medical costs
-Access to health information</p>
+            
+<h2>#Qa</h2>
 
 
+   
 
-    <div></div>
-  </article><article class="post">
-    <div class="title">
-      <h2>
-        <a href="posts/2023-02-07-functional-and-non-functional-testing/">Functional and Non-functional Testing</a>
-      </h2>
-      <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-    </div>
-    <div class="meta">
-      <small>
-        <i class="fa-solid fa-pen-nib"></i>
-      </small>
-      <a href="/build/authors/salinadangol2" class="author">
-        <small class="name">Salina Dangol</small>
-      </a>
-      <small>
-        <i class="fa-regular fa-calendar"></i>
-      </small>
-        <small>Tue Feb 07 2023 </small>
-    </div>
-    <span class="image featured">
-      <img src="images/pic01.jpg" alt="" />
-    </span>
-    <p>Functional Testing
+  
+    <article class="post">
+      <div class="title">
+        <h2>
+          <a href="/build/posts/2023-02-07-functional-and-non-functional-testing/">Functional and Non-functional Testing</a>
+        </h2>
+      </div>
+      <div class="meta">
+        <small>
+          <i class="fa-solid fa-pen-nib"></i>
+        </small>
+        <a href="/build/authors/salinadangol2" class="author">
+          <small class="name">Salina Dangol</small>
+          <!-- <img src="/images/avatar.jpg" alt="" /> -->
+        </a>
+        <small>
+          <i class="fa-regular fa-calendar"></i>
+        </small>
+    
+          <small>Tue Feb 07 2023 </small>
+      </div>
+      <span class="image featured">
+        <img src="images/pic01.jpg" alt="" />
+      </span>
+      <p>Functional Testing
 Functional testing is a type of testing which verifies that each function of the
 software application works as expected. Every functionality of the system is
 tested by providing appropriate input, verifying the output and comparing the
 actual results with the expected results....</p>
+      <div></div>
+    </article>
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
 
 
 
-    <div></div>
-  </article><article class="post">
-    <div class="title">
-      <h2>
-        <a href="posts/2023-02-07-yoga-in-daily-life/">Yoga in Daily Life</a>
-      </h2>
-      <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-    </div>
-    <div class="meta">
-      <small>
-        <i class="fa-solid fa-pen-nib"></i>
-      </small>
-      <a href="/build/authors/salinadangol2" class="author">
-        <small class="name">Salina Dangol</small>
-      </a>
-      <small>
-        <i class="fa-regular fa-calendar"></i>
-      </small>
-        <small>Tue Feb 07 2023 </small>
-    </div>
-    <span class="image featured">
-      <img src="images/pic01.jpg" alt="" />
-    </span>
-    <p>Yoga is not a religion, it is a way of living that aims towards a healthy mind
-in a healthy body.
-According to the National Institutes of Health, scientific evidence shows that
-yoga supports stress management, mental health, mindfulness, healthy eating,
-weight loss and quality sleep.
-I took my first...</p>
-
-
-
-    <div></div>
-  </article><article class="post">
-    <div class="title">
-      <h2>
-        <a href="posts/2023-02-28-blockchain/">Blockchain</a>
-      </h2>
-      <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-    </div>
-    <div class="meta">
-      <small>
-        <i class="fa-solid fa-pen-nib"></i>
-      </small>
-      <a href="/build/authors/parashagrawal1" class="author">
-        <small class="name">Parash Agrawal</small>
-      </a>
-      <small>
-        <i class="fa-regular fa-calendar"></i>
-      </small>
-        <small>Tue Feb 28 2023 </small>
-    </div>
-    <span class="image featured">
-      <img src="images/pic01.jpg" alt="" />
-    </span>
-    <p>Blockchain is an immutable digital ledger where all the transactions are public
-and transparent. Blockchain is decentralized and distributed that is linked to a
-P2P network. Bitcoin, Ethereum, NFTs, Collectibles are some implementations of
-blockchain. It can be used in different sectors such as...</p>
-
-
-
-    <div></div>
-  </article><article class="post">
-    <div class="title">
-      <h2>
-        <a href="posts/2023-02-28-how-to-add-ssh-and-gpg-keys-in-github-or-gitlab/">How to add ssh and gpg keys in GitHub or GitLab?</a>
-      </h2>
-      <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-    </div>
-    <div class="meta">
-      <small>
-        <i class="fa-solid fa-pen-nib"></i>
-      </small>
-      <a href="/build/authors/poudelmadhav" class="author">
-        <small class="name">madhav</small>
-      </a>
-      <small>
-        <i class="fa-regular fa-calendar"></i>
-      </small>
-        <small>Tue Feb 28 2023 </small>
-    </div>
-    <span class="image featured">
-      <img src="images/pic01.jpg" alt="" />
-    </span>
-    <p>Configure git
-Initial configuration of git if you have not set yet.
-
-git config --global color.ui true
-
-git config --global user.name &amp;quot;YOUR NAME&amp;quot;
-
-git config --global user.email &amp;quot;YOUR@EMAIL.com&amp;quot;
-
-ssh-keygen -t rsa -b 4096 -C &amp;quot;YOUR@EMAIL.com&amp;quot;
-
-Adding SSH key
-Run this...</p>
-
-
-
-    <div></div>
-  </article><article class="post">
-    <div class="title">
-      <h2>
-        <a href="posts/2023-03-09-building-blogs-using-trello-as-your-database/">Building blogs using Trello as your database</a>
-      </h2>
-      <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-    </div>
-    <div class="meta">
-      <small>
-        <i class="fa-solid fa-pen-nib"></i>
-      </small>
-      <a href="/build/authors/aadeshshrestha2" class="author">
-        <small class="name">Aadesh Shrestha</small>
-      </a>
-      <small>
-        <i class="fa-regular fa-calendar"></i>
-      </small>
-        <small>Thu Mar 09 2023 </small>
-    </div>
-    <span class="image featured">
-      <img src="images/pic01.jpg" alt="" />
-    </span>
-    <p>Github has always been able to serve static contents through Jekyll using Github
-pages. Github pages has enabled millions of static pages to be published easily
-and for free. The only downside of it has been that Github supports limited
-number of Ruby gems.
-With the introduction of Github action, we...</p>
-
-
-
-    <div></div>
-  </article><article class="post">
-    <div class="title">
-      <h2>
-        <a href="posts/2023-03-09-depth-mask/">Depth Mask</a>
-      </h2>
-      <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-    </div>
-    <div class="meta">
-      <small>
-        <i class="fa-solid fa-pen-nib"></i>
-      </small>
-      <a href="/build/authors/sandeshshrestha17" class="author">
-        <small class="name">Sandesh Shrestha</small>
-      </a>
-      <small>
-        <i class="fa-regular fa-calendar"></i>
-      </small>
-        <small>Thu Mar 09 2023 </small>
-    </div>
-    <span class="image featured">
-      <img src="images/pic01.jpg" alt="" />
-    </span>
-    <p>A depth mask provides the depth information from an image. The pixel intensity
-of the depth mask represents the object&#39;s distance from a viewpoint that can be
-color-coded to visually represent close or far objects.
-To display the depth map, we scale its values to [0,255] where 255 (white)...</p>
-
-
-
-    <div></div>
-  </article><article class="post">
-    <div class="title">
-      <h2>
-        <a href="posts/2023-03-09-integrating-python-script-to-ruby-code/">Integrating python script to ruby code</a>
-      </h2>
-      <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-    </div>
-    <div class="meta">
-      <small>
-        <i class="fa-solid fa-pen-nib"></i>
-      </small>
-      <a href="/build/authors/parashagrawal1" class="author">
-        <small class="name">Parash Agrawal</small>
-      </a>
-      <small>
-        <i class="fa-regular fa-calendar"></i>
-      </small>
-        <small>Thu Mar 09 2023 </small>
-    </div>
-    <span class="image featured">
-      <img src="images/pic01.jpg" alt="" />
-    </span>
-    <p>Introduction
-Ruby is a dynamic and open source language capable of carrying out large
-varieties of tasks and functionalities. But, there are few things that are
-limited to a specific language. There are scenarios where carrying out tasks in
-other programming language has more incentives. These...</p>
-
-
-
-    <div></div>
-  </article><article class="post">
-    <div class="title">
-      <h2>
-        <a href="posts/2023-03-09-smart-contracts/">Smart Contracts</a>
-      </h2>
-      <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-    </div>
-    <div class="meta">
-      <small>
-        <i class="fa-solid fa-pen-nib"></i>
-      </small>
-      <a href="/build/authors/parashagrawal1" class="author">
-        <small class="name">Parash Agrawal</small>
-      </a>
-      <small>
-        <i class="fa-regular fa-calendar"></i>
-      </small>
-        <small>Thu Mar 09 2023 </small>
-    </div>
-    <span class="image featured">
-      <img src="images/pic01.jpg" alt="" />
-    </span>
-    <p>Smart contracts are programs stored on blockchain. They are equivalent to
-classes in other programming languages. Smart contracts are created for specific
-purposes in order to fulfill predetermined conditions. The main purpose of a
-smart contract is to implement and automate real world use cases.
-As...</p>
-
-
-
-    <div></div>
-  </article><article class="post">
-    <div class="title">
-      <h2>
-        <a href="posts/2023-03-10-building-a-simple-nft-minting-project/">Building a simple NFT minting project</a>
-      </h2>
-      <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-    </div>
-    <div class="meta">
-      <small>
-        <i class="fa-solid fa-pen-nib"></i>
-      </small>
-      <a href="/build/authors/parashagrawal1" class="author">
-        <small class="name">Parash Agrawal</small>
-      </a>
-      <small>
-        <i class="fa-regular fa-calendar"></i>
-      </small>
-        <small>Fri Mar 10 2023 </small>
-    </div>
-    <span class="image featured">
-      <img src="images/pic01.jpg" alt="" />
-    </span>
-    <p>NFTs (Non-fungible Tokens) are crypto assets which are unique to each other.
-Digital assets, art and collectibles are it&#39;s major components. NFT standard is
-defined as ERC721 in ethereum network.
-No two NFTs are the same unlike 2 coins of the same crypto currency. Example: 2
-bitcoins have the same...</p>
-
-
-
-    <div></div>
-  </article><article class="post">
-    <div class="title">
-      <h2>
-        <a href="posts/2023-03-10-deploying-smart-contract-in-testnet/">Deploying smart contract in testnet</a>
-      </h2>
-      <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-    </div>
-    <div class="meta">
-      <small>
-        <i class="fa-solid fa-pen-nib"></i>
-      </small>
-      <a href="/build/authors/parashagrawal1" class="author">
-        <small class="name">Parash Agrawal</small>
-      </a>
-      <small>
-        <i class="fa-regular fa-calendar"></i>
-      </small>
-        <small>Fri Mar 10 2023 </small>
-    </div>
-    <span class="image featured">
-      <img src="images/pic01.jpg" alt="" />
-    </span>
-    <p>Testnet is an instance of a blockchain underlying the same or newer version of
-the actual network. As it&#39;s name suggests, testnet is used for deploying and
-testing smart contracts before deploying them to actual network. For example:
-Goerli testnet can be used as testnet before deploying to the...</p>
-
-
-
-    <div></div>
-  </article><article class="post">
-    <div class="title">
-      <h2>
-        <a href="posts/2023-03-10-signing-and-verifying-data-on-blockchain/">Signing and verifying data on blockchain</a>
-      </h2>
-      <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-    </div>
-    <div class="meta">
-      <small>
-        <i class="fa-solid fa-pen-nib"></i>
-      </small>
-      <a href="/build/authors/parashagrawal1" class="author">
-        <small class="name">Parash Agrawal</small>
-      </a>
-      <small>
-        <i class="fa-regular fa-calendar"></i>
-      </small>
-        <small>Fri Mar 10 2023 </small>
-    </div>
-    <span class="image featured">
-      <img src="images/pic01.jpg" alt="" />
-    </span>
-    <p>A digital signature is a mathematical algorithm routinely used to validate the
-authenticity and integrity of a message. Digital signature includes the concept
-of public and private keys.
-Generally, a message hash is signed by an address, then the signed message is
-transacted on behalf of the user by...</p>
-
-
-
-    <div></div>
-  </article>
           </div>
         </div>
       </main> 
