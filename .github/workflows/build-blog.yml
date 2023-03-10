@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - gh-pages
+      - 11ty
   schedule:
     - cron: "* */24 * * *"
   workflow_dispatch:
@@ -16,8 +17,8 @@ jobs:
       - uses: actions/checkout@master
       - name: copy env variable
         run: |
-        echo ${{ secrets.DOT_ENV }} >> .env 
-        cat .env
+          echo ${{ secrets.DOT_ENV }} >> .env 
+          cat .env
       - name: rm posts
         run: |
           cp ./scripts/rmposts.sh _posts/rmposts.sh
