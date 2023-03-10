@@ -41,6 +41,8 @@ jobs:
             ${{ runner.os }}-node-
       - name: npm install
         run: npm i
+      - name: Install 11ty
+        run: npm install -g @11ty/eleventy
       - name: Build posts
         run: |
           npm run hook
