@@ -1,6 +1,5 @@
 // Get any environment variables we need
 import * as dotenv from 'dotenv'
-import markdownIt from 'markdown-it'
 
 dotenv.config()
 

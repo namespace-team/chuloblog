@@ -20,9 +20,13 @@
   "dependencies": {
     "debug": "^4.3.4",
     "dotenv": "^16.0.3",
+    "fs": "^0.0.1-security",
     "fs-extra": "^11.1.0",
     "markdown-it": "^10.0.0",
+    "node-fetch": "^3.3.0",
     "nunjucks": "^3.2.3",
+    "path": "^0.12.7",
+    "url": "^0.11.0",
     "yaml": "^2.2.1"
   }
 }
