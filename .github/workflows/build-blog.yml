@@ -13,6 +13,7 @@ jobs:
     name: Build and commit on same branch
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@master
       - name: rm posts
         run: |
           cp ./scripts/rmposts.sh _posts/rmposts.sh
