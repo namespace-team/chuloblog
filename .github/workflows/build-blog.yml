@@ -16,9 +16,11 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: copy env variable
-        run: |
-          echo ${{ secrets.DOT_ENV }} >> .env 
-          cat .env
+        env:
+          DOT_ENV: ${{ secrets.DOT_ENV }}
+        run: echo $DOT_ENV >> .env
+      - name: echo env
+        run: cat .env
       - name: rm posts
         run: |
           cp ./scripts/rmposts.sh _posts/rmposts.sh
