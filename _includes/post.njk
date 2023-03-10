@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+  <article class="post">
+    <div class="title">
+      <h2>
+        {{ title }}
+      </h2>
+      <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+    </div>
+    <div class="meta">
+      <small>
+        <i class="fa-solid fa-pen-nib"></i>
+      </small>
+      <a href="#" class="author">
+        <small class="name">{{ fullname }}</small>
+        <!-- <img src="/images/avatar.jpg" alt="" /> -->
+      </a>
+      <small>
+        <i class="fa-regular fa-calendar"></i>
+      </small>
+  
+        <small>{{ date | dateFormat }}</small>
+    </div>
+    <span class="image featured">
+      <img src="images/pic01.jpg" alt="" />
+    </span>
+    <p>{{ content | safe }}</p>
+
+
+
+    <div></div>
+  </article>

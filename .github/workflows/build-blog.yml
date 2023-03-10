@@ -13,31 +13,6 @@ jobs:
     name: Build and commit on same branch
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source code
-        uses: actions/checkout@v2
-
-      - name: create .env file
-        run: echo "${{ secrets.DOT_ENV }}" > .env
-
-      - name: Setup ruby
-        run: echo "::set-output name=RUBY_VERSION::$(cat .ruby-version)"
-        id: rbenv
-
-      - name: Use Ruby ${{ steps.rbenv.outputs.RUBY_VERSION }}
-        uses: ruby/setup-ruby@v1
-
-      - name: Use cache gems
-        uses: actions/cache@v1
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gem-
-      - name: bundle install
-        run: |
-          gem install bundler
-          bundle install --jobs 4 --retry 3 --path vendor/bundle
-
       - name: rm posts
         run: |
           cp ./scripts/rmposts.sh _posts/rmposts.sh
@@ -48,9 +23,13 @@ jobs:
           cd ..
       - name: Build posts
         run: |
-          bundle exec jekyll build
-      - uses: EndBug/add-and-commit@v9
+          npm run hook
+      - uses: actions/checkout@master
+      - name: Build
+        uses: TartanLlama/actions-eleventy@master
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          add: "_posts"
-          author_name: autobot
-          message: "auto commit"
+          publish_dir: _site 
+          publish_branch: gh-pages
+  
