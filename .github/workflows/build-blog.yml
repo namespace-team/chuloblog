@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - name: copy env variable
+        run: echo ${{ secrets.DOT_ENV }} >> .env
       - name: rm posts
         run: |
           cp ./scripts/rmposts.sh _posts/rmposts.sh
