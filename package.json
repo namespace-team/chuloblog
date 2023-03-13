@@ -1,0 +1,33 @@
+{
+  "name": "11ty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.liquid",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "eleventy --serve --watch",
+    "hook": "node _utils/addTrelloHook.mjs",
+    "build": "NODE_ENV=production eleventy --pathprefix ''",
+    "deploy": "gh-pages -d _site"
+  },
+  "keywords": [ ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  },
+  "dependencies": {
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.3",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.1.0",
+    "markdown-it": "^10.0.0",
+    "node-fetch": "^3.3.0",
+    "nunjucks": "^3.2.3",
+    "path": "^0.12.7",
+    "url": "^0.11.0",
+    "yaml": "^2.2.1",
+    "@11ty/eleventy": "^2.0.0"
+
+  }
+}

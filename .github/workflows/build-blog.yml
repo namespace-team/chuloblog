@@ -4,40 +4,22 @@ on:
   push:
     branches:
       - gh-pages
+      - 11ty
   schedule:
-    - cron: '* */24 * * *'
+    - cron: "* */24 * * *"
   workflow_dispatch:
 
 jobs:
   build-and-deploy:
     name: Build and commit on same branch
     runs-on: ubuntu-latest
+    env:  
+      TRELLO_KEY: ${{ secrets.TRELLO_KEY }}
+      TRELLO_TOKEN: ${{ secrets.TRELLO_TOKEN }}
+      TRELLO_LIST_ID: ${{ secrets.TRELLO_LIST_ID }}
+      TRELLO_BOARD_ID: ${{ secrets.TRELLO_BOARD_ID }}
     steps:
-      - name: Checkout source code
-        uses: actions/checkout@v2
-      
-      - name: create .env file
-        run: echo "${{ secrets.DOT_ENV }}" > .env
-      
-      - name: Setup ruby 
-        run: echo "::set-output name=RUBY_VERSION::$(cat .ruby-version)"
-        id: rbenv
-      
-      - name: Use Ruby ${{ steps.rbenv.outputs.RUBY_VERSION }}
-        uses: ruby/setup-ruby@v1
-      
-      - name: Use cache gems
-        uses: actions/cache@v1
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gem-
-      - name: bundle install
-        run: |
-          gem install bundler
-          bundle install --jobs 4 --retry 3 --path vendor/bundle
-      
+      - uses: actions/checkout@master
       - name: rm posts
         run: |
           cp ./scripts/rmposts.sh _posts/rmposts.sh
@@ -46,12 +28,26 @@ jobs:
           sh rmposts.sh
           rm rmposts.sh
           cd ..
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 17
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: npm install
+        run: npm i
+      - name: Install 11ty
+        run: npm install -g @11ty/eleventy
       - name: Build posts
         run: |
-          bundle exec jekyll build
-      - uses: EndBug/add-and-commit@v7
+          npm run hook
+          npm run build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          add: '*.md'
-          author_name: Neekesh Chhetri
-          branch: gh-pages
-          message: 'auto commit'
+          folder: _site # The folder the action should deploy.

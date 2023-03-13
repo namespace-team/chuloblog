@@ -1,0 +1,37 @@
+---
+layout: default
+title: List of all blogs
+---
+
+
+{%- for post in collections.post  -%}
+  <article class="post">
+    <div class="title">
+      <h2>
+        <a href="{{ post.data.permalink }}">{{ post.data.title }}</a>
+      </h2>
+      <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+    </div>
+    <div class="meta">
+      <small>
+        <i class="fa-solid fa-pen-nib"></i>
+      </small>
+      <a href="{{ '/' | url }}authors/{{ post.data.author }}" class="author">
+        <small class="name">{{ post.data.fullname  }}</small>
+      </a>
+      <small>
+        <i class="fa-regular fa-calendar"></i>
+      </small>
+        <small>{{ post.data.date | dateFormat }}</small>
+    </div>
+    <span class="image featured">
+      <img src="images/pic01.jpg" alt="" />
+    </span>
+    <p>{{ post.content | striptags(true) | truncate(300) }}</p>
+
+
+
+    <div></div>
+  </article>
+
+{%- endfor -%}

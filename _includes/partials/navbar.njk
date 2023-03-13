@@ -1,0 +1,29 @@
+
+<nav class="links">
+<a href="{{ '/' | url }}" class="logo">WILT</a>
+  <ul>
+    <li class="search">
+      <form class="search" onSubmit=" lunr_search(document.getElementById('lunrsearch').value);" style="height: 100%;" method="dialog">
+          <input type="text" class="form-control" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Search..." style="display:flex;height: 100%;"/>
+      </form>
+    </li>
+  </ul>
+  <ul class="header-menus">
+    {% for item in navigation %}
+      <li><a href="{{ item.url }}" >{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+<script>
+var documents = [
+  {%- for post in collections.post -%}
+    {
+    "id": {{ loop.index0 }},
+    "url": "{{ '/' | url }}authors/{{post.data.author}}",
+    "title": "{{ post.data.title }}",
+    "body": "{{  post.content | striptags(true) | algExcerpt | safe }}"
+    },
+  {%- endfor -%}
+]
+</script>
+

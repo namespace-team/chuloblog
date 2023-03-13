@@ -1,0 +1,37 @@
+<div class="sidebar_container">
+  <div class="brand">
+    <a href="{{ '/' | url  }}"><img src="https://freesvg.org/img/Paper-note.png" alt="Brand Image"></a>
+    <h4>What I Learn Today</h4>
+  </div>
+  <div>
+    <h4>Authors</h4>
+    <ul>
+      {% for x in collections.authors %}
+        <li class="sidebar_list"><a href="{{ '/' | url  }}authors/{{ x.author }}">{{ x.firstname | capitalize }}</a><span>{{x.count}}</span></li>
+      {% endfor %}
+    </ul>
+
+    <h4>Tags</h4>
+    <ul>
+      {% for x in collections.labels %}
+        <li class="sidebar_list"> <a href="{{ '/' | url  }}labels/{{ x.label }}">{{ x.label | capitalize }}</a><span>{{x.count}}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div>
+    <section id="footer">
+      <ul class="icons">
+        <li><a href="https://www.facebook.com/chulo.solutions/" class="fa-brands fa-square-facebook" target="_blank"></a></li>
+        <li><a href="https://www.instagram.com/chulosolutions/" class="fa-brands fa-instagram" target="_blank"></a></li>
+        <li><a href="https://www.linkedin.com/company/chulo-solution/" class="fa-brands fa-linkedin" target="_blank"></a></li>
+        <li><a href="mailto:contact@chulo-solutions.com" class="fa-solid fa-envelope"></a></li>
+      </ul>
+      <p class="copyright">&copy;  <a href="http://namespace.jp" target="_blank">Chulo Solutions </a><br> 2016 - <span id="copyright-year"></span></a>.</p>
+    </section>
+  </div>
+</div>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+      
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/dark.min.css" integrity="sha512-bfLTSZK4qMP/TWeS1XJAR/VDX0Uhe84nN5YmpKk5x8lMkV0D+LwbuxaJMYTPIV13FzEv4CUOhHoc+xZBDgG9QA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
