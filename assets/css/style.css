@@ -8,8 +8,11 @@ body {
   flex-direction: column;
   margin: 0;
   background-color: #f4f4f4;
-  font-family: "Cutive Mono", Helvetica, sans-serif;
-  word-break: break-all;
+  font-family: "Noto Sans Lao", Helvetica, sans-serif;
+  word-break: normal;
+  text-align: justify;
+  line-height: 23px;
+  font-weight: 200;
 }
 
 a {
@@ -77,6 +80,9 @@ header nav .header-menus li a {
   position: sticky;
   padding-left: 48px;
 }
+.row .sidebar .brand img:hover {
+  filter: saturate(100%) contrast(800%) brightness(0) invert(50%) sepia(100%) hue-rotate(133deg);
+}
 .row .main_content {
   width: 85%;
   padding: 0 20px 20px 5px;
@@ -142,9 +148,6 @@ img {
   flex-direction: column;
 }
 .sidebar_container .brand img {
-  width: 96px;
-}
-.sidebar_container .brand img:hover {
   width: 96px;
 }
 .sidebar_container .brand h4 {

@@ -54,9 +54,10 @@ function toAuthor(article) {
   var frontMatter = {
     layout: 'default',
     link: members[members.findIndex(user => user.id === article.idMembers[0])]['username'],
+    title: members[members.findIndex(user => user.id === article.idMembers[0])]['fullname'].split(" ")[0],
     permalink: 'authors/{{link}}/'
   }
-  var body = '{% include "partials/authorPost.njk" %}'
+  var body = '{% include "authorPost.njk" %}'
   var wholeContent = `---\n${yaml.stringify(frontMatter)}---\n\n${body}\n`
   return wholeContent
 }
@@ -65,9 +66,10 @@ function toLabel(article) {
   var frontMatter = {
     layout: 'default',
     link: article.labels[0].name,
+    title: article.labels[0].name,
     permalink: 'labels/{{link}}/'
   }
-  var body = '{% include "partials/labelPost.njk" %}'
+  var body = '{% include "labelPost.njk" %}'
   var wholeContent = `---\n${yaml.stringify(frontMatter)}---\n\n${body}\n`
   return wholeContent
 }

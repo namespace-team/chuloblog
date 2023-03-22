@@ -1,5 +1,5 @@
 // $primary: #2ebaae;
-$primary: #ba4a2e;
+$primary: #2ebaae;
 
 $secondary: #4b4b4b;
 $gray: #f4f4f4;
@@ -19,33 +19,13 @@ body {
   flex-direction: column;
   margin: 0;
   background-color: $gray;
-  font-family: "Cutive Mono", Helvetica, sans-serif;
-  word-break: break-all;
-
+  font-family: "Noto Sans Lao", Helvetica, sans-serif;
+  word-break: normal;
+  text-align: justify;
+  line-height: 23px;
+  font-weight: 200;
 
 }
-
-// pre {
-//   code {
-//     display: block;
-//     line-height: 1.75em;
-//     padding: 1em 1.5em;
-//     overflow-x: auto;
-//     background: rgba(1, 1, 21, 0.726);
-//     color: #79ee52;
-//     border: solid 1px rgba(5, 58, 56, 0.3);
-//     font-family: "Courier New", monospace;
-//     font-size: 0.9em;
-//     margin: 0 0.25em;
-//     padding: 0.25em 0.65em;
-//   }
-// }
-
-
-
-// font-family: 'Cutive Mono', monospace;
-// font-family: 'Raleway', sans-serif;
-// font-family: 'Roboto Mono', monospace;
 
 a {
   text-decoration: none;
@@ -85,6 +65,9 @@ header {
       font-weight: 800;
 
     }
+
+
+
 
     ul {
       margin: 0;
@@ -132,6 +115,14 @@ header {
     top: 80px;
     position: sticky;
     padding-left: 48px;
+
+    .brand {
+      img {
+        &:hover {
+          filter: saturate(100%) contrast(800%) brightness(0) invert(50%) sepia(100%) hue-rotate(133deg);
+        }
+      }
+    }
 
   }
 
@@ -212,9 +203,9 @@ img {
       width: 96px;
     }
 
-    img:hover {
-      filter: invert();
-    }
+    // img:hover {
+    //   filter: invert(100%);
+    // }
 
     h4 {
       font-size: 1.1em;
