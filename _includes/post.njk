@@ -10,19 +10,17 @@ layout: default
       <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
     </div>
     <div class="meta">
-      <small>
         <i class="fa-solid fa-pen-nib"></i>
-      </small>
-      <a href="#" class="author">
-        <small class="name">{{ fullname }}</small>
-        <!-- <img src="/images/avatar.jpg" alt="" /> -->
-      </a>
-      <small>
-        <i class="fa-regular fa-calendar"></i>
-      </small>
-  
-        <small>{{ date | dateFormat }}</small>
-    </div>
+        <small class="name">
+          <a href="{{ '/' | url }}authors/{{ author }}" class="author">
+            {{ fullname  | capitalize}}
+          </a>
+        </small>
+        <span class="date">
+          <i class="fa-regular fa-calendar"></i>
+          <small class="author">{{ date | dateFormat }}</small>
+        </span>
+      </div>
     <span class="image featured">
       <img src="images/pic01.jpg" alt="" />
     </span>

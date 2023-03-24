@@ -10,18 +10,16 @@
         </h2>
       </div>
       <div class="meta">
-        <small>
-          <i class="fa-solid fa-pen-nib"></i>
+        <i class="fa-solid fa-pen-nib"></i>
+        <small class="name">
+          <a href="{{ '/' | url }}authors/{{ post.data.author }}" class="author">
+            {{ post.data.fullname | capitalize}}
+          </a>
         </small>
-        <a href="{{ '/' | url }}authors/{{ post.data.author }}" class="author">
-          <small class="name">{{ post.data.fullname }}</small>
-          <!-- <img src="/images/avatar.jpg" alt="" /> -->
-        </a>
-        <small>
+          <span class="date">
           <i class="fa-regular fa-calendar"></i>
-        </small>
-    
-          <small>{{ post.data.date | dateFormat }}</small>
+          <small class="author">{{ post.data.date | dateFormat }}</small>
+        </span>
       </div>
       <span class="image featured">
         <img src="images/pic01.jpg" alt="" />

@@ -19,7 +19,7 @@ var documents = [
   {%- for post in collections.post -%}
     {
     "id": {{ loop.index0 }},
-    "url": "{{ '/' | url }}authors/{{post.data.author}}",
+    "url": "{{ '/' | url }}posts/{{post.data.date | postDate}}-{{post.data.title | slugify}}",
     "title": "{{ post.data.title }}",
     "body": "{{  post.content | striptags(true) | algExcerpt | safe }}"
     },

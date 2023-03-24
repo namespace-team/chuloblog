@@ -13,6 +13,10 @@ module.exports = (eleventyConfig) => {
     return collection.getFilteredByGlob("posts/**/*.md");
   });
 
+  eleventyConfig.addFilter("postDate", (dateObj) => {
+    return new Date(dateObj).toISOString().split('T')[0];
+  });
+
   function elementCount(arr, element) {
     return arr.reduce((currentElement, arrElement) =>
       (arrElement == element ? currentElement + 1 : currentElement), 0);
@@ -120,6 +124,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("assets/js/lunr.min.js");
   eleventyConfig.addPassthroughCopy("assets/js/main.js");
   eleventyConfig.addPassthroughCopy("assets/js/search.js");
+  eleventyConfig.addPassthroughCopy({ "assets/image/favicon": "/" });
+
   // eleventyConfig.addPassthroughCopy("authors/sample.liquid");
 
 
