@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-      sandesh
+      Install ruby with `rbenv` and `ruby-build`
     </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 <link type="text/css" rel="stylesheet" href="/assets/css/style.css?version=0.2">
@@ -172,70 +172,127 @@ var documents = [{
           </div>
           <div class="main_content" id="contentArea">
             
-
-
-<h2>#Sandesh</h2>
-
-
-   
-
-   
-
-   
-
-   
-
-   
-
-   
-
-  
-    <article class="post">
-      <div class="title">
-        <h2>
-          <a href="/posts/2023-03-09-depth-mask/">Depth Mask</a>
-        </h2>
-        <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
-      </div>
-      <div class="meta">
+  <article class="post">
+    <div class="title">
+      <h2>
+        Install ruby with `rbenv` and `ruby-build`
+      </h2>
+      <!-- <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p> -->
+    </div>
+    <div class="meta">
         <i class="fa-solid fa-pen-nib"></i>
         <small class="name">
-          <a href="/authors/sandeshshrestha17" class="author">
-            Sandesh shrestha
+          <a href="/authors/poudelmadhav" class="author">
+            Madhav
           </a>
         </small>
         <span class="date">
           <i class="fa-regular fa-calendar"></i>
-          <small class="author">Thu Mar 09 2023 </small>
+          <small class="author">Fri Mar 31 2023 </small>
         </span>
       </div>
-      <span class="image featured">
-        <img src="images/pic01.jpg" alt="" />
-      </span>
-      <p>A depth mask provides the depth information from an image. The pixel intensity
-of the depth mask represents the object&#39;s distance from a viewpoint that can be
-color-coded to visually represent close or far objects.
-To display the depth map, we scale its values to [0,255] where 255 (white)...</p>
+    <span class="image featured">
+      <img src="images/pic01.jpg" alt="" />
+    </span>
+    <p><p>To install Ruby using <code>ruby-build</code> and <code>rbenv</code>, you can follow these steps:</p>
+<ol>
+<li>First, make sure you have <code>ruby-build</code> and <code>rbenv</code> installed on your system.
+You can check if you have them installed by running the following commands in
+your terminal:</li>
+</ol>
+<pre><code class="language-shell">
+which ruby-build
+
+which rbenv
+</code></pre>
+<p>If either of these commands returns a path, it means that the corresponding tool
+is already installed on your system. If not, you can follow the installation
+instructions for your operating system.</p>
+<ol start="2">
+<li>Next, check if the version of Ruby you want to install is available in
+<code>ruby-build</code>. You can do this by running the following command:</li>
+</ol>
+<pre><code class="language-shell">
+ruby-build --definitions | grep &lt;version
+</code></pre>
+<p>Replace <code>&lt;version&gt;</code> with the version of Ruby you want to install. If the version
+is available in <code>ruby-build</code>, you can proceed to step 3. Otherwise, you will
+need to wait for the update to become available in <code>ruby-build</code>, or you can try
+installing Ruby manually.</p>
+<ol start="3">
+<li>Install the Ruby version using <code>rbenv</code> and <code>ruby-build</code>:</li>
+</ol>
+<pre><code class="language-shell">
+rbenv install &lt;version&gt;
+
+</code></pre>
+<p>Replace <code>&lt;version&gt;</code> with the version of Ruby you want to install. This will
+download the Ruby source code and compile it, which may take some time.</p>
+<ol start="4">
+<li>Once the installation is complete, you can set the global version of Ruby to
+use:</li>
+</ol>
+<pre><code class="language-shell">
+rbenv global &lt;version&gt;
+
+</code></pre>
+<p>This will set the global version of Ruby to the version you just installed.</p>
+<ol start="5">
+<li>Finally, verify that Ruby was installed correctly by running the following
+command:</li>
+</ol>
+<pre><code class="language-shell">
+ruby -v
+
+</code></pre>
+<p>This should display the version of Ruby you just installed.</p>
+<p>If the version of Ruby you want to install is not available in <code>ruby-build</code> yet,
+but it is available in the official release, you can download the source code
+from the Ruby website and compile it manually. Once you have the source code,
+you can use <code>ruby-build</code> to compile and install it:</p>
+<ol>
+<li>
+<p>Download the Ruby source code from the official Ruby website:
+https://www.ruby-lang.org/en/downloads/</p>
+</li>
+<li>
+<p>Extract the source code to a directory of your choice.</p>
+</li>
+<li>
+<p>Use <code>ruby-build</code> to compile and install the Ruby version:</p>
+</li>
+</ol>
+<pre><code class="language-shell">
+ruby-build &lt;path/to/source/code&gt; &lt;install/path&gt;
+
+</code></pre>
+<p>Replace <code>&lt;path/to/source/code&gt;</code> with the path to the directory containing the
+extracted source code, and <code>&lt;install/path&gt;</code> with the path where you want to
+install Ruby.</p>
+<ol start="4">
+<li>Once the installation is complete, you can set the global version of Ruby to
+use:</li>
+</ol>
+<pre><code class="language-shell">
+rbenv global &lt;version&gt;
+
+</code></pre>
+<ol start="5">
+<li>Replace <code>&lt;version&gt;</code> with the version of Ruby you just installed.</li>
+</ol>
+<p>Finally, verify that Ruby was installed correctly by running the following
+command:</p>
+<pre><code class="language-shell">
+ruby -v
+
+</code></pre>
+<p>This should display the version of Ruby you just installed.</p>
+</p>
 
 
 
-      <div></div>
-    </article>
-   
-
-   
-
-   
-
-   
-
-   
-
-   
-
-   
-
-
+    <div></div>
+  </article>
 
           </div>
         </div>
